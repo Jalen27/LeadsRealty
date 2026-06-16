@@ -629,7 +629,7 @@ footer hr{
     color:#ccc;
     font-size:14px;
 }
-]```css
+
 /* Social Icon Colors */
 
 .social-card .fa-facebook-f{
@@ -667,7 +667,7 @@ footer hr{
     transform:scale(1.15);
     transition:.3s;
 }
-```css
+
 /* ==========================
    LOADING SCREEN
 ========================== */
@@ -739,412 +739,244 @@ footer hr{
     }
 }
 /* =========================
-MOBILE RESPONSIVE FIXES
+   LOADER
 ========================= */
 
-@media (max-width: 768px) {
-
-```
-/* Hero */
-.hero-section h1{
-    font-size: 2rem;
-    line-height: 1.2;
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#02153d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:opacity .6s ease;
 }
 
-.hero-section p{
-    font-size: 1rem;
+.loader-content{
+    text-align:center;
 }
 
-/* Navbar Logo */
-.navbar-brand img,
-.logo{
-    max-width: 120px;
-    height: auto;
+.loader-content img{
+    width:120px;
+    margin-bottom:20px;
+    animation:floatLogo 2s ease-in-out infinite;
 }
 
-/* About Section */
-#about img{
-    margin-bottom: 20px;
+.loader-content h2{
+    color:#fff;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:20px;
 }
 
-/* Property Cards */
+.loading-bar{
+    width:250px;
+    height:6px;
+    background:rgba(255,255,255,.2);
+    border-radius:20px;
+    overflow:hidden;
+    margin:auto;
+}
+
+.loading-bar span{
+    display:block;
+    height:100%;
+    width:0;
+    background:#3b82f6;
+    animation:loading 2s linear forwards;
+}
+
+@keyframes loading{
+    from{width:0;}
+    to{width:100%;}
+}
+
+@keyframes floatLogo{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* =========================
+   SOCIAL ICON COLORS
+========================= */
+
+.social-card .fa-facebook-f{
+    color:#1877F2;
+}
+
+.social-card .fa-instagram{
+    background:linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.social-card .fa-tiktok{
+    color:#25F4EE;
+}
+
+.social-card .fa-youtube{
+    color:#FF0000;
+}
+
+.social-card .fa-envelope{
+    color:#4285F4;
+}
+
+.social-card:hover i:first-child{
+    transform:scale(1.15);
+    transition:.3s;
+}
+
+/* =========================
+   UNIVERSAL RESPONSIVE
+========================= */
+
+.container{
+    max-width:1200px;
+}
+
 .card{
-    margin-bottom: 20px;
+    height:100%;
 }
 
-.card-img-top{
-    height: 220px;
-    object-fit: cover;
+.contact-info a{
+    word-break:break-word;
 }
 
-/* Contact Section */
-.contact-info{
-    margin-top: 30px;
-}
-
-.contact-info p{
-    word-break: break-word;
-}
-
-/* Footer */
-.footer-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-}
-
-.footer-column{
-    width: 100%;
-}
-
-.footer-logo{
-    width: 100%;
-}
-
-.footer-logo img{
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto 15px;
-    display: block;
-}
-
-/* Social Cards */
-.social-card{
-    width: 100%;
-    justify-content: center;
-}
-
-/* Forms */
-input,
-textarea,
-button{
-    width: 100%;
-}
-
-/* General */
-body{
-    overflow-x: hidden;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
-```
-
-}
-
-/* Small Phones */
-@media (max-width: 480px){
-
-```
-.hero-section h1{
-    font-size: 1.6rem;
-}
-
-.hero-section p{
-    font-size: 0.95rem;
-}
-
-.btn-lg{
-    width: 100%;
-}
-
-.footer-bottom p{
-    font-size: 0.85rem;
-}
-/* ====================================
-UNIVERSAL RESPONSIVE DESIGN
-==================================== */
-
-/* Prevent horizontal scrolling */
-html, body {
-overflow-x: hidden;
-width: 100%;
-}
-
-/* All images responsive */
-img {
-max-width: 100%;
-height: auto;
-display: block;
-}
-
-/* Container spacing */
-.container {
-width: 100%;
-max-width: 1200px;
-}
-
-/* Hero Section */
-.hero-section {
-padding: 120px 20px 80px;
-}
-
-.hero-section h1 {
-font-size: clamp(2rem, 5vw, 4rem);
-line-height: 1.2;
-}
-
-.hero-section p {
-font-size: clamp(1rem, 2vw, 1.25rem);
-}
-
-/* Logo */
-.logo,
-.navbar-brand img,
-.footer-logo img {
-max-width: 150px;
-height: auto;
-}
-
-/* Cards */
-.card {
-height: 100%;
-}
-
-.card-img-top {
-width: 100%;
-height: 250px;
-object-fit: cover;
-}
-
-/* Footer */
-.footer-container {
-display: flex;
-flex-wrap: wrap;
-gap: 30px;
-justify-content: space-between;
-}
-
-.footer-column,
-.footer-logo {
-flex: 1 1 250px;
-}
-
-/* Social Cards */
-.social-card {
-width: 100%;
-max-width: 350px;
-}
-
-/* Contact Links */
-.contact-info a {
-word-break: break-word;
-}
-
-/* =====================
-TABLETS
-===================== */
-@media (max-width: 992px) {
-
-```
-.hero-section {
-    text-align: center;
-}
-
-.footer-container {
-    justify-content: center;
-}
-```
-
-}
-
-/* =====================
-MOBILE
-===================== */
-@media (max-width: 768px) {
-
-```
-.hero-section {
-    padding: 100px 15px 60px;
-}
-
-.hero-section h1 {
-    font-size: 2rem;
-}
-
-.hero-section p {
-    font-size: 1rem;
-}
+@media(max-width:992px){
 
-.footer-container {
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-logo,
-.footer-column {
-    width: 100%;
-}
-
-.social-card {
-    max-width: 100%;
-}
-
-.card-img-top {
-    height: 220px;
-}
-```
+    .hero-section h1{
+        font-size:3.5rem;
+    }
 
-}
-
-/* =====================
-SMALL PHONES
-===================== */
-@media (max-width: 480px) {
-
-```
-.hero-section h1 {
-    font-size: 1.6rem;
-}
+    h2{
+        font-size:2.5rem;
+    }
 
-.hero-section p {
-    font-size: 0.95rem;
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 }
 
-.btn,
-.btn-lg {
-    width: 100%;
-}
-
-.card-img-top {
-    height: 180px;
-}
+@media(max-width:768px){
 
-.footer-bottom p {
-    font-size: 0.85rem;
-}
-```
+    .hero-section{
+        padding:100px 15px 60px;
+    }
 
-}
+    .hero-section h1{
+        font-size:2rem;
+        line-height:1.2;
+    }
 
-/* =====================
-LARGE DESKTOPS
-===================== */
-@media (min-width: 1400px) {
-
-```
-.container {
-    max-width: 1320px;
-}
+    .hero-section p{
+        font-size:1rem;
+    }
 
-.hero-section h1 {
-    font-size: 4.5rem;
-}
-}
+    .logo{
+        height:55px;
+    }
 
-.navbar-nav .nav-link {
-    color: white !important;
-}
+    section{
+        padding:80px 0;
+    }
 
-.navbar-toggler {
-    border-color: white;
-}
-/* Navigation Menu */
+    #about img{
+        margin-bottom:20px;
+    }
 
-.navbar-menu {
-margin-left: auto;
-}
+    .card{
+        margin-bottom:20px;
+    }
 
-.navbar-list {
-display: flex;
-list-style: none;
-gap: 25px;
-margin: 0;
-padding: 0;
-}
+    .card img{
+        height:220px;
+    }
 
-.navbar-list li a {
-text-decoration: none;
-color: white;
-font-weight: 500;
-transition: 0.3s;
-}
+    .contact-info{
+        margin-top:30px;
+    }
 
-.navbar-list li a:hover {
-color: #ffc107;
-}
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
 
-/* Mobile Layout */
-@media (max-width: 768px) {
-
-```
-.navbar-list {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    margin-top: 15px;
-}
+    .footer-logo img{
+        max-width:120px;
+        margin:0 auto 15px;
+    }
 
-.navbar-menu {
-    width: 100%;
-}
+    .social-card{
+        justify-content:center;
+    }
 
-.navbar {
-    padding: 15px;
-}
+    .navbar-collapse{
+        background:#212529;
+        margin-top:10px;
+        padding:15px;
+        border-radius:10px;
+    }
 
-}
-/* Responsive Navbar */
-
-.logo{
-height: 55px;
-width: auto;
-}
+    .navbar-nav{
+        gap:10px;
+    }
 
-.navbar{
-padding: 10px 0;
+    .nav-link{
+        padding:12px;
+        border-radius:8px;
+    }
 }
 
-.nav-link{
-font-size: 16px;
-font-weight: 500;
-color: #fff !important;
-transition: 0.3s;
-}
+@media(max-width:480px){
 
-.nav-link:hover{
-color: #ffc107 !important;
-}
+    .hero-section h1{
+        font-size:1.6rem;
+    }
 
-.navbar-toggler{
-border: none;
-}
+    .hero-section p{
+        font-size:.95rem;
+    }
 
-.navbar-toggler:focus{
-box-shadow: none;
-}
+    h2{
+        font-size:2rem;
+    }
 
-@media (max-width: 991px){
-
-```
-.navbar-collapse{
-    background: #212529;
-    margin-top: 10px;
-    padding: 15px;
-    border-radius: 10px;
-}
+    .btn,
+    .btn-lg{
+        width:100%;
+    }
 
-.navbar-nav{
-    gap: 10px;
-}
+    .card img{
+        height:180px;
+    }
 
-.nav-link{
-    padding: 12px;
-    border-radius: 8px;
+    .footer-bottom p{
+        font-size:.85rem;
+    }
 }
 
-.nav-link:hover{
-    background: rgba(255,255,255,0.08);
-}
+@media(min-width:1400px){
 
+    .container{
+        max-width:1320px;
+    }
 
+    .hero-section h1{
+        font-size:4.5rem;
+    }
 }
-
-
-
-
-
-
