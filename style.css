@@ -1035,6 +1035,14 @@ LARGE DESKTOPS
 }
 }
 
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
 
 
 
