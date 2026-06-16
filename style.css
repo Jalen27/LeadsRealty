@@ -112,22 +112,30 @@ img{
     z-index:1000;
     background:transparent !important;
     box-shadow:none;
+    padding:25px 0;
 }
 
-.navbar-nav{
+.navbar .container{
     display:flex;
-    flex-direction:row;
-    gap:30px;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    height:70px;
+    width:auto;
+    object-fit:contain;
 }
 
 .nav-link{
     color:#fff !important;
     font-size:1.1rem;
     font-weight:600;
+    transition:.3s;
 }
 
 .nav-link:hover{
-    color:var(--primary) !important;
+    color:#d4a017 !important;
 }
 
 .navbar-toggler{
@@ -137,46 +145,57 @@ img{
 .navbar-toggler:focus{
     box-shadow:none;
 }
-.navbar .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+
+.navbar-toggler-icon{
+    filter:invert(1);
 }
 
+@media(min-width:769px){
+    .navbar-nav{
+        display:flex;
+        flex-direction:row;
+        gap:30px;
+    }
+}
 
 /* =========================
    HERO SECTION
 ========================= */
-
 .hero-section{
-    height:100vh;
+    position:relative;
+    min-height:100vh;
 
     background:
     linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.45)
     ),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c');
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
-    align-items:flex-start;
-    padding-top:220px;
+    align-items:center;
+    justify-content:flex-start;
+
+    padding-left:8%;
 }
+
 .hero-content{
-    max-width:800px;
-    margin: top 60px;
+    max-width:900px;
+    color:#fff;
     position:relative;
-    z-index:10;
+    z-index:2;
 }
 
 .hero-content h1{
-    font-size:6.5rem;
+    font-size:6rem;
     font-weight:800;
+    line-height:1.1;
+    margin-bottom:20px;
     color:white;
-    line-height:1.05;
 }
 
 .hero-content span{
@@ -184,9 +203,9 @@ img{
 }
 
 .hero-content p{
-    color:white;
     font-size:1.5rem;
-    margin:25px 0;
+    margin-bottom:35px;
+    color:white;
 }
 
 .hero-btn{
@@ -204,7 +223,6 @@ img{
     background:#b8860b;
     color:white;
 }
-
 /* =========================
    GENERAL SECTION
 ========================= */
@@ -1007,5 +1025,86 @@ footer hr{
 
     .hero-content p{
         font-size:1.1rem;
+    }
+}
+/* ====================================
+   MOBILE FIXES
+==================================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:15px 0;
+    }
+
+    .logo{
+        height:50px;
+    }
+
+    .navbar-collapse{
+        background:rgba(15,23,42,.95);
+        margin-top:15px;
+        padding:15px;
+        border-radius:12px;
+    }
+
+    .navbar-nav{
+        display:flex;
+        flex-direction:column !important;
+        gap:10px !important;
+        text-align:center;
+    }
+
+    .nav-link{
+        padding:12px;
+        font-size:1rem;
+    }
+
+    .hero-section{
+        min-height:100vh;
+        justify-content:center;
+        align-items:center;
+        padding-left:0;
+        padding-right:0;
+        padding-top:80px;
+        text-align:center;
+    }
+
+    .hero-content{
+        width:100%;
+        padding:0 20px;
+        margin:auto;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+        line-height:1.15;
+    }
+
+    .hero-content p{
+        font-size:1.1rem;
+        margin-bottom:25px;
+    }
+
+    .hero-btn{
+        width:auto;
+        padding:15px 25px;
+        font-size:1rem;
+    }
+}
+
+@media (max-width:576px){
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .hero-btn{
+        width:100%;
+        max-width:300px;
     }
 }
