@@ -1042,6 +1042,52 @@ LARGE DESKTOPS
 .navbar-toggler {
     border-color: white;
 }
+/* Navigation Menu */
+
+.navbar-menu {
+margin-left: auto;
+}
+
+.navbar-list {
+display: flex;
+list-style: none;
+gap: 25px;
+margin: 0;
+padding: 0;
+}
+
+.navbar-list li a {
+text-decoration: none;
+color: white;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.navbar-list li a:hover {
+color: #ffc107;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+
+```
+.navbar-list {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.navbar-menu {
+    width: 100%;
+}
+
+.navbar {
+    padding: 15px;
+}
+
+}
+
 
 
 
