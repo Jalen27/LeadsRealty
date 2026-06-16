@@ -4,7 +4,11 @@
 ==================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
+body{
+    font-family:'Montserrat',sans-serif;
+}
 /* =========================
    VARIABLES
 ========================= */
@@ -112,7 +116,7 @@ img{
     z-index:1000;
     background:transparent !important;
     box-shadow:none;
-    padding:25px 0;
+    padding:35px 0;
 }
 
 .navbar .container{
@@ -121,43 +125,35 @@ img{
     align-items:center;
 }
 
-.logo{
-    height:70px;
-    width:auto;
-    object-fit:contain;
+/* Brand */
+.navbar-brand{
+    color:#fff !important;
+    font: size 2.2em;
+    font-weight:500;
+    letter-spacing:.5px;
+}
+
+/* Menu */
+.navbar-nav{
+    display:flex;
+    flex-direction:row;
+    gap:45px;
 }
 
 .nav-link{
     color:#fff !important;
-    font-size:1.1rem;
-    font-weight:600;
+    font-size:1.15rem;
+    font-weight:500;
+    letter-spacing:.3px;
     transition:.3s;
 }
 
 .nav-link:hover{
     color:#d4a017 !important;
 }
-
-.navbar-toggler{
-    border:none;
+.navbar-collapse{
+    justify-content:flex-end;
 }
-
-.navbar-toggler:focus{
-    box-shadow:none;
-}
-
-.navbar-toggler-icon{
-    filter:invert(1);
-}
-
-@media(min-width:769px){
-    .navbar-nav{
-        display:flex;
-        flex-direction:row;
-        gap:30px;
-    }
-}
-
 /* =========================
    HERO SECTION
 ========================= */
@@ -191,11 +187,12 @@ img{
 }
 
 .hero-content h1{
-    font-size:6rem;
+    font-family:'Montserrat',sans-serif;
+    font: size 5.5em;
     font-weight:800;
     line-height:1.1;
-    margin-bottom:20px;
-    color:white;
+    letter-spacing:-1px;
+    margin: bottom 20px;
 }
 
 .hero-content span{
@@ -203,8 +200,8 @@ img{
 }
 
 .hero-content p{
-    font-size:1.5rem;
-    margin-bottom:35px;
+    font: size 1.2em;
+    margin: bottom 30px;px;
     color:white;
 }
 
@@ -214,7 +211,7 @@ img{
     color:white;
     padding:18px 40px;
     border-radius:4px;
-    font-size:1.2rem;
+    font: size 1.05em;
     font-weight:600;
     transition:.3s;
 }
