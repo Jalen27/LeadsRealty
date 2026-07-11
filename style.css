@@ -195,6 +195,31 @@ box-shadow:0 5px 15px rgba(0,0,0,.15);
 .navbar-collapse{
     justify-content:flex-end;
 }
+/* ===========================
+   NAVBAR LOGO
+=========================== */
+
+/* Navbar Logo */
+.navbar-brand{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img{
+    width:110px;
+    height:56px;
+
+    object-fit:contain;
+    background:#fff;
+    border-radius:12px;
+    padding:5px 10px;
+}
+
+.navbar-brand img:hover{
+    transform: scale(1.05);
+}
 /* =========================
    HERO SECTION
 ========================= */
@@ -208,7 +233,7 @@ box-shadow:0 5px 15px rgba(0,0,0,.15);
         rgba(0,0,0,.45),
         rgba(0,0,0,.45)
     ),
-    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c');
+    url("images/background/bg.png");
 
     background-size:cover;
     background-position:center;
@@ -2106,6 +2131,72 @@ height:120px;
 
     height:220px;
 
+}
+
+.join-us{
+    padding:90px 8%;
+    background:#f7f9fc;
+}
+
+.join-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.join-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.join-card:hover{
+    transform:translateY(-10px);
+}
+
+.join-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.join-content{
+    padding:25px;
+}
+
+.join-content h3{
+    color:#1E4F97;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.join-content p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.join-content a{
+    color:#1E4F97;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.join-content a:hover{
+    color:#f4b400;
+}
+
+@media(max-width:992px){
+
+.join-grid{
+    grid-template-columns:1fr;
+}
+
+.join-card img{
+    height:220px;
 }
 
 }
