@@ -1330,20 +1330,22 @@ SMALL MOBILE
     text-align:left;
 }
 
-.service-info h3{
-    margin:0;
+@media (max-width:768px){
 
-     font-size:clamp(1.4rem,4vw,2rem);
-    font-weight:700;
+    .service-info h3{
+        display:flex;
+        align-items:center;
+        justify-content:center;
 
-    color:#fff;
+        min-height:110px;   /* lahat pareho ang taas */
 
-    line-height:1.2;
+        text-align:center;
+        font-size:2rem;
+        line-height:1.2;
 
-    min-height:78px;
+        margin-bottom:20px;
+    }
 
-    display:flex;
-    align-items:center;
 }
 .service-info ul{
     margin:0;
