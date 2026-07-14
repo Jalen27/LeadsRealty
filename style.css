@@ -956,11 +956,10 @@ transition:.3s;
 ========================================== */
 
 .team-section{
-    padding:100px 0;
+        padding-top:80px;
+    padding-bottom:30px;
     background:#071321;
-    overflow:hidden;
 }
-
 .team-header{
     text-align:center;
     margin-bottom:70px;
@@ -1207,8 +1206,8 @@ SMALL MOBILE
 ========================================== */
 
 .services{
-    padding:100px 8%;
-    background:#F8FAFC;
+    padding:80px 8% 40px;
+    background:#f8f9fc;
 }
 
 /* ==========================
@@ -1402,6 +1401,169 @@ SMALL MOBILE
 .service-details li{
     margin-bottom:10px;
     font-size:18px;
+}
+
+/* ==========================================
+   JOIN US
+========================================== */
+
+.join-us{
+    padding:100px 8%;
+    background:#F8FAFC;
+}
+
+.join-wrapper{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.join-tag{
+    display:inline-block;
+    background:#0B3D91;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.join-left h2{
+    font-size:3rem;
+    font-weight:800;
+    color:#081321;
+    margin-bottom:20px;
+}
+
+.join-left h2 span{
+    color:#0B3D91;
+}
+
+.join-left p{
+    color:#555;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.join-benefits{
+    list-style:none;
+    padding:0;
+}
+
+.join-benefits li{
+    margin-bottom:18px;
+    font-size:1.1rem;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#333;
+}
+
+.join-benefits i{
+    color:#0B3D91;
+}
+
+.apply-card{
+    background:#0B3D91;
+    color:#fff;
+    border-radius:20px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(11,61,145,.20);
+}
+
+.apply-icon{
+    width:90px;
+    height:90px;
+    background:#fff;
+    color:#0B3D91;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    margin:0 auto 25px;
+}
+
+.apply-card h3{
+    font-size:2rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.apply-card p{
+    color:#E5E7EB;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.apply-btn{
+    display:inline-block;
+    width:100%;
+    background:#fff;
+    color:#0B3D91;
+    padding:16px;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.apply-btn:hover{
+    background:#F4B400;
+    color:#fff;
+}
+
+.apply-btn i{
+    margin-right:10px;
+}
+
+.apply-card small{
+    display:block;
+    margin-top:20px;
+    color:#CBD5E1;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.join-wrapper{
+    grid-template-columns:1fr;
+}
+
+.apply-card{
+    margin-top:20px;
+}
+
+}
+
+@media(max-width:768px){
+
+.join-us{
+    padding:80px 20px;
+}
+
+.join-left h2{
+    font-size:2.3rem;
+}
+
+.join-benefits li{
+    font-size:1rem;
+}
+
+.apply-card{
+    padding:35px 25px;
+}
+
+.apply-btn{
+    font-size:.95rem;
+}
+
 }
 
 
