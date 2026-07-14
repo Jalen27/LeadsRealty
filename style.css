@@ -1488,25 +1488,6 @@ SMALL MOBILE
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================
    TABLET
 ========================== */
@@ -1628,241 +1609,80 @@ SMALL MOBILE
 
 }
 
+/* ==========================================
+   LOCATIONS
+========================================== */
+
 .locations{
-    padding:90px 8%;
-    background:#f7f9fc;
+    padding:100px 8%;
+    background:#F8FAFC;
 }
 
 .location-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    grid-template-columns:repeat(2,1fr);
     gap:35px;
     margin-top:50px;
 }
 
 .location-card{
-
     background:#fff;
-
-    border-radius:18px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    padding:25px;
-
-    transition:.3s;
-
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s ease;
 }
 
 .location-card:hover{
-
     transform:translateY(-8px);
-
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
 }
 
 .location-card h3{
-
-    color:#1e4f97;
-
-    font-size:30px;
-
-    margin-bottom:12px;
-
+    color:#0B3D91;
+    font-size:1.8rem;
+    font-weight:700;
+    text-align:center;
+    margin:30px 20px 10px;
 }
 
 .location-card p{
-
-    color:#555;
-
+    text-align:center;
+    color:#666;
+    padding:0 25px;
     margin-bottom:20px;
-
     line-height:1.7;
-
 }
 
 .map{
-
-    border-radius:12px;
-
+    width:100%;
     overflow:hidden;
-
-    margin-bottom:20px;
-
 }
 
 .map iframe{
-
     width:100%;
-
-    height:280px;
-
+    height:320px;
     border:0;
-
+    display:block;
 }
 
 .map-btn{
-
     display:block;
-
-    text-align:center;
-
-    background:#1e4f97;
-
+    width:calc(100% - 40px);
+    margin:25px auto 30px;
+    padding:15px;
+    border-radius:10px;
+    background:#0B3D91;
     color:#fff;
-
-    text-decoration:none;
-
-    padding:14px;
-
-    border-radius:8px;
-
+    text-align:center;
     font-weight:600;
-
     transition:.3s;
-
 }
 
 .map-btn:hover{
-
-    background:#0e376f;
-
-}
-@media (max-width:768px){
-
-.location-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.location-card{
-
-    padding:20px;
-
-}
-
-.location-card h3{
-
-    font-size:24px;
-
-}
-
-.map iframe{
-
-    height:220px;
-
-}
-
-.join-us{
-    padding:90px 8%;
-    background:#f7f9fc;
-}
-
-.join-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:50px;
-}
-
-.join-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-    transition:.35s;
-}
-
-.join-card:hover{
-    transform:translateY(-10px);
-}
-
-.join-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-}
-
-.join-content{
-    padding:25px;
-}
-
-.join-content h3{
-    color:#1E4F97;
-    margin-bottom:15px;
-    font-size:28px;
-}
-
-.join-content p{
-    color:#666;
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-.join-content a{
-    color:#1E4F97;
-    font-weight:600;
-    text-decoration:none;
-}
-
-.join-content a:hover{
-    color:#f4b400;
-}
-
-@media(max-width:992px){
-
-.join-grid{
-    grid-template-columns:1fr;
-}
-
-.join-card img{
-    height:220px;
-}
-
-}
-.about-icon{
-
-    width:90px;
-    height:90px;
-
-    background:#0B3D91;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin-bottom:25px;
-
-    box-shadow:0 10px 30px rgba(11,61,145,.25);
-
-}
-
-.about-icon i{
-
+    background:#174EA6;
     color:#fff;
-
-    font-size:38px;
-
 }
-
-.info-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
-
-}
-
-.info-card:hover .about-icon{
-
-    transform:scale(1.08);
-
-    background:#174ea6;
-
-}
-
 
 /* ==========================================
    RESPONSIVE
@@ -2155,6 +1975,37 @@ height:45px;
 
 .service-box:hover{
     transform:none;
+}
+
+}
+/* ==========================================
+   LOCATIONS RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.location-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.locations{
+    padding:80px 20px;
+}
+
+.location-card h3{
+    font-size:1.5rem;
+}
+
+.location-card p{
+    font-size:1rem;
+}
+
+.map iframe{
+    height:250px;
 }
 
 }
