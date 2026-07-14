@@ -1333,7 +1333,7 @@ SMALL MOBILE
 .service-info h3{
     margin:0;
 
-    font-size:2rem;
+     font-size:clamp(1.4rem,4vw,2rem);
     font-weight:700;
 
     color:#fff;
@@ -2093,6 +2093,78 @@ height:45px;
 
     .footer-bottom{
         font-size:.85rem;
+    }
+
+}
+/* =========================
+   SERVICES MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    .services-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .services-left{
+        position:static;
+        margin-bottom:30px;
+    }
+
+    .service-box{
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+
+        gap:15px;
+
+        height:auto;
+        min-height:120px;
+
+        padding:25px;
+
+    }
+
+    .number{
+        font-size:56px;
+        min-width:auto;
+    }
+
+    .service-info{
+        width:100%;
+        text-align:center;
+    }
+
+    .service-info h3{
+
+        font-size:2rem;
+        line-height:1.25;
+
+        min-height:auto;
+
+        display:block;
+
+        margin-bottom:15px;
+    }
+
+    .service-details{
+        width:100%;
+    }
+
+    .service-details ul{
+        padding:0;
+        list-style:none;
+    }
+
+    .service-details li{
+        font-size:18px;
+        margin-bottom:10px;
+    }
+
+    .service-details p{
+        font-size:17px;
     }
 
 }
