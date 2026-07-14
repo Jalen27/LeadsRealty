@@ -406,29 +406,26 @@ margin-bottom:20px;
 }
 
 .about-cards{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:25px;
-
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:40px;
 }
 
 .info-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    text-align:center;
 
-background:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-padding:35px;
+    min-height:330px;
 
-border-radius:20px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-text-align:center;
-
-transition:.35s;
-
+    transition:.35s;
 }
 
 .info-card:hover{
@@ -447,21 +444,23 @@ margin-bottom:20px;
 
 .info-card h4{
 
-font-size:28px;
+    font-size:30px;
 
-margin-bottom:15px;
+    color:#0B3D91;
 
-color:#0B3D91;
+    font-weight:700;
+
+    margin-bottom:18px;
 
 }
 
 .info-card p{
 
-font-size:17px;
+    font-size:17px;
 
-line-height:1.8;
+    line-height:1.9;
 
-color:#555;
+    color:#555;
 
 }
 
@@ -1612,17 +1611,6 @@ S
     }
 
 }
-@media (max-width:768px){
-
-.team-grid{
-    grid-template-columns:1fr;
-}
-
-.team-card{
-    height:260px;
-}
-
-}
 /*=========================
  COMPANY LEGALITIES
 ==========================*/
@@ -2305,5 +2293,47 @@ S
 .join-card img{
     height:220px;
 }
+
+}
+.about-icon{
+
+    width:90px;
+    height:90px;
+
+    background:#0B3D91;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 30px rgba(11,61,145,.25);
+
+}
+
+.about-icon i{
+
+    color:#fff;
+
+    font-size:38px;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.info-card:hover .about-icon{
+
+    transform:scale(1.08);
+
+    background:#174ea6;
 
 }
