@@ -1058,6 +1058,49 @@ transition:.3s;
     }
 
 }
+.services-list{
+    max-width:700px;
+    margin:60px auto;
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.services-list h3{
+    color:#0B3D91;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.services-list ul{
+    list-style:disc;
+    padding-left:30px;
+    margin-bottom:35px;
+}
+
+.services-list li{
+    font-size:22px;
+    color:#333;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.inquire-btn{
+    display:inline-block;
+    background:#0B3D91;
+    color:#fff;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.inquire-btn:hover{
+    background:#174EA6;
+}
 /* ==========================================
    PAYING IT FORWARD
 ========================================== */
