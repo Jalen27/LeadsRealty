@@ -1309,13 +1309,12 @@ transform:scale(1.02);
 }
 
 .csr-info h3{
-    font-size:32px;
-    font-weight:600;
+    font-size:2rem;        /* ≈32px */
+    font-weight:700;
     color:#0B3D91;
     line-height:1.3;
     margin-bottom:18px;
 }
-
 .csr-info p{
     font-size:19px;
     line-height:1.8;
@@ -1602,6 +1601,7 @@ CSR PAGE
 
 }
 
+
 /* MOBILE */
 
 @media(max-width:992px){
@@ -1630,7 +1630,7 @@ CSR PAGE
 
     .csr-content h3{
 
-        font-size:24px;
+        font: size 15px;
 
     }
 
