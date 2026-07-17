@@ -1101,154 +1101,238 @@ transition:.3s;
 .inquire-btn:hover{
     background:#174EA6;
 }
-/* ==========================================
-   PAYING IT FORWARD
-========================================== */
-
-.csr-section{
-
-    padding:100px 0;
-
-    background:#fff;
-
-}
-
 .csr-wrapper{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:1fr 1fr;
+grid-template-columns:1.2fr 1fr;
 
-    gap:60px;
+gap:50px;
 
-    align-items:center;
+align-items:center;
 
-    margin-top:60px;
-
-    margin-bottom:70px;
+margin-top:60px;
 
 }
 
-.csr-image img{
+.csr-slider{
 
-    width:100%;
-
-    border-radius:15px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
+position:relative;
 
 }
 
-.csr-content h3{
+.csr-slide{
 
-    font-size:2.3rem;
-
-    color:#0F172A;
-
-    margin-bottom:20px;
+display:none;
 
 }
 
-.csr-content p{
+.csr-slide.active{
 
-    line-height:1.9;
+display:block;
 
-    color:#555;
+}
 
-    margin-bottom:35px;
+.csr-slide img{
+
+width:100%;
+
+height:470px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+transition:.4s;
+
+}
+
+.csr-slide img:hover{
+
+transform:scale(1.02);
+
+}
+
+.csr-info h3{
+
+font-size:34px;
+
+color:#0B3D91;
+
+margin-bottom:25px;
+
+}
+
+.csr-info p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:35px;
 
 }
 
 .csr-btn{
 
-    display:inline-block;
+display:inline-block;
 
-    padding:15px 40px;
+padding:16px 35px;
 
-    border:2px solid #1E4F97;
+background:#0B3D91;
 
-    color:#1E4F97;
+color:#fff;
 
-    text-decoration:none;
+text-decoration:none;
 
-    border-radius:6px;
+border-radius:10px;
 
-    font-weight:600;
+font-weight:600;
 
-    transition:.35s;
+transition:.3s;
 
 }
 
 .csr-btn:hover{
 
-    background:#1E4F97;
-
-    color:#fff;
+background:#174ea6;
 
 }
 
-/* Gallery */
+/* MOBILE */
 
-.csr-gallery{
+@media(max-width:992px){
 
-    display:grid;
+.csr-wrapper{
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
+grid-template-columns:1fr;
 
 }
 
-.csr-card{
+.csr-slide img{
 
+height:320px;
+
+}
+
+.csr-info{
+
+text-align:center;
+
+}
+
+}
+.csr-modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.modal-box{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:18px;
+
+width:90%;
+
+max-width:800px;
+
+position:relative;
+
+text-align:center;
+
+}
+
+.modal-box img{
+
+width:100%;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+}
+
+.close{
+
+position:absolute;
+
+right:20px;
+
+top:15px;
+
+font-size:35px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+.csr-slider{
+    position:relative;
     overflow:hidden;
-
-    border-radius:15px;
-
 }
 
-.csr-card img{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-    transition:.4s;
-
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:rgba(11,61,145,.85);
+    color:#fff;
+    font-size:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    z-index:100;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.csr-card:hover img{
-
-    transform:scale(1.08);
-
+.prev{
+    left:20px;
 }
 
-/* Mobile */
+.next{
+    right:20px;
+}
 
-@media(max-width:768px){
-
-    .csr-wrapper{
-
-        grid-template-columns:1fr;
-
-        gap:30px;
-
-    }
-
-    .csr-content{
-
-        text-align:center;
-
-    }
-
-    .csr-gallery{
-
-        grid-template-columns:1fr;
-
-    }
-
+.prev:hover,
+.next:hover{
+    background:#174EA6;
+    transform:translateY(-50%) scale(1.08);
 }
 /*====================================
 CSR PAGE
